@@ -3,8 +3,7 @@ import Products from '../components/ProductCollection';
 import clsx from 'clsx';
 
 const navigation = [
-  { name: 'Products', href: '#', current: true },
-  { name: 'Wishlist', href: '#', current: false },
+  { name: 'Abandoned Carts', href: '#', current: true },
 ]
 
 const Home: React.VFC = () => {
@@ -38,7 +37,7 @@ const Home: React.VFC = () => {
       <div className="py-10">
         <header className="mb-4">
           <div className="max-w-7xl mx-auto px-8">
-            <h1 className="text-3xl font-bold leading-tight text-gray-900">Dashboard</h1>
+            <h1 className="text-3xl font-bold leading-tight text-gray-900">List of Carts</h1>
           </div>
         </header>
         <main>

@@ -1,15 +1,26 @@
-export const LatestProducts = /* GraphQL */`
-  query LatestProducts {
-    products(first: 12, channel: "default-channel") {
+export const LatestCarts = /* GraphQL */`
+  query LatestCarts {
+    checkouts(first: 20, channel: "default-channel") {
       edges {
         node {
           id
-          name
-          thumbnail {
-            url
+          user {
+            firstName
           }
-          category {
-            name
+          lines {
+            variant {
+              product {
+                name
+                thumbnail {
+                  url
+                }
+              }
+            }
+          }
+          totalPrice {
+            gross {
+              amount
+            }
           }
         }
       }
